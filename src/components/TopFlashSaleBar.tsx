@@ -16,7 +16,7 @@ export const TopFlashSaleBar: React.FC = () => {
   };
 
   return (
-    <div className="relative bg-white text-slate-800 py-2.5 px-4 shadow-[0_2px_10px_rgba(29,53,130,0.06)] border-b border-sky-100 z-50 overflow-hidden">
+    <div className="relative bg-white text-slate-800 py-2.5 px-3 sm:px-4 shadow-[0_2px_10px_rgba(29,53,130,0.06)] border-b border-sky-100 z-50 overflow-hidden w-full max-w-full">
       {/* Decorative Brand Background Pattern (Clean White with Indo Digital Soft Blue & Cyan Tech Accents) */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         {/* Soft radial gradients aligned to brand palette */}

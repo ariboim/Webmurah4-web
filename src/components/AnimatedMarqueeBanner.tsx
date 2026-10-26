@@ -13,7 +13,7 @@ export const AnimatedMarqueeBanner: React.FC = () => {
   ];
 
   return (
-    <div className="relative bg-gradient-to-r from-sky-600 via-sky-500 to-blue-600 text-white overflow-hidden py-2.5 shadow-sm border-b border-sky-400/40">
+    <div className="relative bg-gradient-to-r from-sky-600 via-sky-500 to-blue-600 text-white overflow-hidden py-2.5 shadow-sm border-b border-sky-400/40 w-full max-w-full">
       {/* Background animated shine */}
       <div className="absolute inset-0 bg-[linear-gradient(90deg,transparent_0%,rgba(255,255,255,0.15)_50%,transparent_100%)] animate-[shimmer_3s_infinite] pointer-events-none" />
 

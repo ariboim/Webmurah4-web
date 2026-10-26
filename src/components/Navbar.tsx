@@ -69,8 +69,8 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, onTabChange }) => {
 
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-2xs">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-2xs w-full max-w-full">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="flex items-center justify-between gap-4 lg:gap-8 h-20">
           {/* Zone 1: Official INDO DIGITAL Logo (Seamless, Zero White-Frame/Tile Artifacts) */}
           <div className="flex items-center gap-2 shrink-0">

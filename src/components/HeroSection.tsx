@@ -65,23 +65,23 @@ export const HeroSection: React.FC = () => {
   const currentNotif = LIVE_NOTIFICATIONS[currentNotifIndex];
 
   return (
-    <section className="relative pt-8 pb-20 overflow-hidden bg-white">
+    <section className="relative pt-8 pb-20 overflow-hidden bg-white w-full max-w-full">
       {/* Dynamic ambient gradient glow */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-gradient-to-b from-sky-200/50 via-sky-100/30 to-transparent blur-3xl opacity-80" />
-        <div className="absolute top-1/3 -right-20 w-[450px] h-[450px] bg-blue-100/40 rounded-full blur-3xl" />
-        <div className="absolute top-1/2 -left-20 w-[450px] h-[450px] bg-sky-100/50 rounded-full blur-3xl" />
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[1000px] max-w-[100vw] h-[500px] bg-gradient-to-b from-sky-200/50 via-sky-100/30 to-transparent blur-3xl opacity-80" />
+        <div className="absolute top-1/3 -right-20 w-[450px] max-w-[80vw] h-[450px] bg-blue-100/40 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 -left-20 w-[450px] max-w-[80vw] h-[450px] bg-sky-100/50 rounded-full blur-3xl" />
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         {/* Hard Selling Flash Sale Urgency Box in Hero */}
         <motion.div
           initial={{ opacity: 0, y: -16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="flex justify-center mb-6"
+          className="flex justify-center mb-6 w-full"
         >
-          <div className="inline-flex flex-wrap items-center justify-center gap-2.5 px-5 py-2.5 rounded-2xl bg-gradient-to-r from-rose-600 via-rose-500 to-amber-600 text-white shadow-lg border border-amber-300 text-xs font-black">
+          <div className="inline-flex flex-wrap items-center justify-center gap-2.5 px-3.5 sm:px-5 py-2.5 rounded-2xl bg-gradient-to-r from-rose-600 via-rose-500 to-amber-600 text-white shadow-lg border border-amber-300 text-xs font-black max-w-full text-center">
             <span className="flex items-center gap-1 bg-yellow-400 text-slate-950 px-2 py-0.5 rounded-md text-[10px] font-black uppercase tracking-wider animate-pulse">
               <Zap className="w-3.5 h-3.5 fill-slate-950" />
               FLASH SALE 6 JAM
@@ -380,9 +380,9 @@ export const HeroSection: React.FC = () => {
 
             {/* Device Container */}
             {deviceMode === 'desktop' ? (
-              <div className="w-full bg-slate-900 rounded-3xl p-3 shadow-2xl border border-slate-800 transition-all duration-300 relative group">
+              <div className="w-full max-w-full bg-slate-900 rounded-3xl p-3 shadow-2xl border border-slate-800 transition-all duration-300 relative group">
                 {/* Floating Micro Badge */}
-                <div className="absolute -top-3 -right-3 z-20 bg-emerald-600 text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-lg border border-white/20 flex items-center gap-1.5 animate-float">
+                <div className="absolute -top-3 right-1 sm:-right-3 z-20 bg-emerald-600 text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-lg border border-white/20 flex items-center gap-1.5 animate-float">
                   <TrendingUp className="w-3 h-3" />
                   <span>Konversi Naik 3.4x</span>
                 </div>
@@ -402,7 +402,7 @@ export const HeroSection: React.FC = () => {
                 </div>
 
                 {/* Simulated Custom Landing Page Canvas */}
-                <div className="bg-white rounded-b-2xl p-5 text-slate-900 space-y-4 max-h-[380px] overflow-y-auto">
+                <div className="bg-white rounded-b-2xl p-3 sm:p-5 text-slate-900 space-y-4 max-h-[380px] overflow-y-auto">
                   <div className="flex items-center justify-between border-b border-slate-100 pb-2.5">
                     <IndoDigitalLogo size="sm" variant="full" />
                     <span className="text-[10px] bg-emerald-50 text-emerald-800 font-bold px-2 py-0.5 rounded-full border border-emerald-200">
@@ -451,8 +451,8 @@ export const HeroSection: React.FC = () => {
                   initial={{ scale: 0.8, rotate: -22, opacity: 0 }}
                   animate={{ scale: 1, rotate: -12, opacity: 1 }}
                   transition={{ duration: 0.7, type: 'spring', bounce: 0.35, delay: 0.2 }}
-                  whileHover={{ scale: 1.08, rotate: -5 }}
-                  className="absolute -bottom-7 -right-4 sm:-bottom-8 sm:-right-7 md:-bottom-9 md:-right-8 z-30 cursor-pointer select-none"
+                  whileHover={{ scale: 1.05, rotate: -5 }}
+                  className="absolute -bottom-6 right-0 sm:-bottom-8 sm:-right-4 md:-bottom-9 md:-right-6 z-30 cursor-pointer select-none"
                   onClick={scrollToOrder}
                   title="Garansi Terjamin 100% Aman - Tanpa DP, Bebas Resiko (Klik untuk Pesan)"
                 >
@@ -461,9 +461,9 @@ export const HeroSection: React.FC = () => {
                     <img
                       src="/assets/aistudio/IMG_20261023_134231_44224f1d.jpg"
                       alt="Logo Garansi Terjamin 100% Aman Tanpa DP Bebas Resiko"
-                      className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 object-contain rounded-full shadow-2xl border-4 border-white bg-white p-0.5 transform transition-transform duration-300 ring-2 ring-red-200/90 drop-shadow-2xl"
+                      className="w-20 h-20 sm:w-28 sm:h-28 md:w-32 md:h-32 object-contain rounded-full shadow-2xl border-4 border-white bg-white p-0.5 transform transition-transform duration-300 ring-2 ring-red-200/90 drop-shadow-2xl"
                     />
-                    <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-slate-950 text-yellow-300 text-[10px] font-black uppercase px-2.5 py-0.5 rounded-full shadow-md whitespace-nowrap border border-yellow-400/50 flex items-center gap-1 opacity-90 group-hover:opacity-100 transition-opacity">
+                    <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-slate-950 text-yellow-300 text-[9px] sm:text-[10px] font-black uppercase px-2 sm:px-2.5 py-0.5 rounded-full shadow-md whitespace-nowrap border border-yellow-400/50 flex items-center gap-1 opacity-90 group-hover:opacity-100 transition-opacity">
                       <Sparkles className="w-2.5 h-2.5 text-yellow-400" />
                       <span>GARANSI RESMI</span>
                     </div>
@@ -471,9 +471,9 @@ export const HeroSection: React.FC = () => {
                 </motion.div>
               </div>
             ) : (
-              <div className="w-[280px] bg-slate-900 rounded-[38px] p-3 shadow-2xl border-4 border-slate-800 transition-all duration-300 relative">
+              <div className="w-[280px] max-w-full bg-slate-900 rounded-[38px] p-3 shadow-2xl border-4 border-slate-800 transition-all duration-300 relative">
                 {/* Floating badge for mobile */}
-                <div className="absolute -top-3 -right-2 z-20 bg-sky-600 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full shadow-lg border border-white/20 animate-float">
+                <div className="absolute -top-3 right-0 sm:-right-2 z-20 bg-sky-600 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full shadow-lg border border-white/20 animate-float">
                   ⚡ 1 Hari Jadi
                 </div>
 
@@ -509,8 +509,8 @@ export const HeroSection: React.FC = () => {
                   initial={{ scale: 0.8, rotate: -22, opacity: 0 }}
                   animate={{ scale: 1, rotate: -12, opacity: 1 }}
                   transition={{ duration: 0.7, type: 'spring', bounce: 0.35 }}
-                  whileHover={{ scale: 1.08, rotate: -5 }}
-                  className="absolute -bottom-6 -right-5 z-30 cursor-pointer select-none"
+                  whileHover={{ scale: 1.05, rotate: -5 }}
+                  className="absolute -bottom-6 right-0 sm:-right-4 z-30 cursor-pointer select-none"
                   onClick={scrollToOrder}
                   title="Garansi Terjamin 100% Aman - Tanpa DP, Bebas Resiko (Klik untuk Pesan)"
                 >
@@ -519,7 +519,7 @@ export const HeroSection: React.FC = () => {
                     <img
                       src="/assets/aistudio/IMG_20261023_134231_44224f1d.jpg"
                       alt="Logo Garansi Terjamin 100% Aman Tanpa DP Bebas Resiko"
-                      className="w-20 h-20 sm:w-24 sm:h-24 object-contain rounded-full shadow-2xl border-4 border-white bg-white p-0.5 transform transition-transform duration-300 ring-2 ring-red-200/90 drop-shadow-xl"
+                      className="w-18 h-18 sm:w-24 sm:h-24 object-contain rounded-full shadow-2xl border-4 border-white bg-white p-0.5 transform transition-transform duration-300 ring-2 ring-red-200/90 drop-shadow-xl"
                     />
                     <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-slate-950 text-yellow-300 text-[9px] font-black uppercase px-2 py-0.5 rounded-full shadow-md whitespace-nowrap border border-yellow-400/50 flex items-center gap-0.5 opacity-90">
                       <span>GARANSI RESMI</span>

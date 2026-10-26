@@ -92,16 +92,16 @@ export const TrustBadgesSection: React.FC = () => {
   return (
     <section
       ref={sectionRef}
-      className="py-12 sm:py-16 bg-gradient-to-b from-white via-sky-50/50 to-slate-50 border-b border-slate-200/80 relative overflow-hidden"
+      className="py-12 sm:py-16 bg-gradient-to-b from-white via-sky-50/50 to-slate-50 border-b border-slate-200/80 relative overflow-hidden w-full max-w-full"
     >
       {/* Background ambient lighting */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-40 bg-gradient-to-r from-sky-200/20 via-indigo-200/15 to-emerald-200/20 blur-3xl pointer-events-none -z-0" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-10 w-full">
         {/* ========================================================= */}
         {/* DYNAMIC CLIENT COUNTER & ORDERS COMPLETED TICKER (SOCIAL PROOF) */}
         {/* ========================================================= */}
-        <div className="bg-white rounded-3xl p-6 sm:p-8 lg:p-10 border border-sky-100 shadow-xl shadow-sky-950/5 relative overflow-hidden">
+        <div className="bg-white rounded-3xl p-4 sm:p-8 lg:p-10 border border-sky-100 shadow-xl shadow-sky-950/5 relative overflow-hidden w-full">
           {/* Top Header & Live Status Beacon */}
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-100">
             <div className="space-y-1.5">
@@ -143,9 +143,9 @@ export const TrustBadgesSection: React.FC = () => {
           </div>
 
           {/* 4 Counter Metrics Grid with Count-Up Animation */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 pt-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 pt-6">
             {/* Metric 1: Orders Completed */}
-            <div className="p-4 sm:p-5 rounded-2xl bg-gradient-to-br from-sky-50/80 via-white to-sky-50/40 border border-sky-100/90 shadow-2xs hover:shadow-md transition-all group">
+            <div className="p-3.5 sm:p-5 rounded-2xl bg-gradient-to-br from-sky-50/80 via-white to-sky-50/40 border border-sky-100/90 shadow-2xs hover:shadow-md transition-all group">
               <div className="flex items-center justify-between mb-2">
                 <div className="w-10 h-10 rounded-xl bg-sky-600 text-white flex items-center justify-center shadow-md shadow-sky-600/20 group-hover:scale-110 transition-transform">
                   <CheckCircle2 className="w-5 h-5 stroke-[2.2]" />

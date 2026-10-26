@@ -124,7 +124,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-white text-slate-900 flex flex-col font-sans selection:bg-sky-200 selection:text-sky-900">
+    <div className="min-h-screen w-full max-w-full overflow-x-hidden relative bg-white text-slate-900 flex flex-col font-sans selection:bg-sky-200 selection:text-sky-900">
       {/* Top Flash Sale Countdown Urgency Bar */}
       <TopFlashSaleBar />
 
