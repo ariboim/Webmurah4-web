@@ -76,7 +76,7 @@ export const IndoDigitalLogo: React.FC<IndoDigitalLogoProps> = ({
           </span>
         </div>
         {showTagline && (
-          <span className="text-[8.5px] sm:text-[9.5px] font-bold text-[#536B92] tracking-[0.22em] uppercase mt-1">
+          <span className="hidden sm:block text-[8.5px] sm:text-[9.5px] font-bold text-[#536B92] tracking-[0.22em] uppercase mt-1">
             INOVASI DIGITAL INDONESIA
           </span>
         )}

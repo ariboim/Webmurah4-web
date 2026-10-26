@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { motion } from 'motion/react';
 import { TopFlashSaleBar } from './components/TopFlashSaleBar';
 import { Navbar, PageTab } from './components/Navbar';
 import { AnimatedMarqueeBanner } from './components/AnimatedMarqueeBanner';
@@ -135,42 +136,117 @@ export default function App() {
       <AnimatedMarqueeBanner />
 
 
-      <main className="flex-1">
+      <main className="flex-1 w-full max-w-full overflow-x-hidden">
         {/* ================= PAGE 1: HOME (BERANDA) ================= */}
         {activeTab === 'home' && (
-          <div className="space-y-0 animate-fade-in">
-            {/* Hero Section */}
-            <HeroSection />
+          <div className="space-y-0">
+            {/* Hero Section (Immediate entrance animation on top) */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <HeroSection />
+            </motion.div>
 
             {/* Official Trust Badges & Guarantee Bar */}
-            <TrustBadgesSection />
+            <motion.div
+              initial={{ opacity: 0, y: 35 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-50px' }}
+              transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <TrustBadgesSection />
+            </motion.div>
 
             {/* Video: 5 Alasan Kenapa Anda Harus Punya Landing Page */}
-            <VideoLandingPageSection />
+            <motion.div
+              initial={{ opacity: 0, y: 35 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-50px' }}
+              transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <VideoLandingPageSection />
+            </motion.div>
 
             {/* Benefits & Copywriting for UMKM */}
-            <UmkmBenefitsSection />
+            <motion.div
+              initial={{ opacity: 0, y: 35 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-50px' }}
+              transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <UmkmBenefitsSection />
+            </motion.div>
 
             {/* Custom UMKM Showcase (8 Industri Interaktif) */}
-            <UmkmShowcaseSection />
+            <motion.div
+              initial={{ opacity: 0, y: 35 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-50px' }}
+              transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <UmkmShowcaseSection />
+            </motion.div>
 
             {/* Pricing Section (Rp 499.000 all-in, 1 hari, free domain) */}
-            <PricingSection />
+            <motion.div
+              initial={{ opacity: 0, y: 35 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-50px' }}
+              transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <PricingSection />
+            </motion.div>
 
             {/* 5-Step Order Flow Diagram */}
-            <OrderFlowSection />
+            <motion.div
+              initial={{ opacity: 0, y: 35 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-50px' }}
+              transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <OrderFlowSection />
+            </motion.div>
 
             {/* Formulir Pemesanan Lengkap dengan Box Cek Ketersediaan Domain Terintegrasi */}
-            <OrderFormSection />
+            <motion.div
+              initial={{ opacity: 0, y: 35 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-50px' }}
+              transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <OrderFormSection />
+            </motion.div>
 
             {/* Testimonials from UMKM Owners */}
-            <TestimonialsSection />
+            <motion.div
+              initial={{ opacity: 0, y: 35 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-50px' }}
+              transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <TestimonialsSection />
+            </motion.div>
 
             {/* FAQ Accordion */}
-            <FaqSection />
+            <motion.div
+              initial={{ opacity: 0, y: 35 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-50px' }}
+              transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <FaqSection />
+            </motion.div>
 
             {/* Home Bottom Action Navigation Banner */}
-            <section className="py-16 bg-gradient-to-r from-sky-900 via-slate-900 to-indigo-950 text-white border-t border-slate-800">
+            <motion.section
+              initial={{ opacity: 0, y: 35 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-50px' }}
+              transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+              className="py-16 bg-gradient-to-r from-sky-900 via-slate-900 to-indigo-950 text-white border-t border-slate-800"
+            >
               <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
                 <h3 className="text-2xl sm:text-4xl font-black tracking-tight text-balance">
                   Siap Naik Kelas & Buka Pintu Penjualan 24 Jam Nonstop?
@@ -207,57 +283,82 @@ export default function App() {
                   </a>
                 </div>
               </div>
-            </section>
+            </motion.section>
           </div>
         )}
 
         {/* ================= PAGE 2: FORM ORDER (PEMESANAN) ================= */}
         {activeTab === 'order' && (
-          <div className="animate-fade-in">
+          <motion.div
+            key="order"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+          >
             <OrderPageSection
               onNavigateToHome={() => handleTabChange('home')}
               onNavigateToContact={() => handleTabChange('kontak')}
             />
-          </div>
+          </motion.div>
         )}
 
         {/* ================= PAGE 3: ARTIKEL (KISAH SUKSES UMKM) ================= */}
         {activeTab === 'artikel' && (
-          <div className="animate-fade-in">
+          <motion.div
+            key="artikel"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+          >
             <ArticlesPageSection
               onNavigateToOrder={() => handleTabChange('order')}
               onNavigateToAdmin={() => handleTabChange('admin')}
             />
-          </div>
+          </motion.div>
         )}
 
         {/* ================= PAGE 4: KEMITRAAN MANDIRI (NON-PKWT) ================= */}
         {activeTab === 'kemitraan' && (
-          <div className="animate-fade-in">
+          <motion.div
+            key="kemitraan"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+          >
             <KemitraanPageSection
               onNavigateToOrder={() => handleTabChange('order')}
               onNavigateToContact={() => handleTabChange('kontak')}
             />
-          </div>
+          </motion.div>
         )}
 
         {/* ================= PAGE 5: KONTAK KAMI (HUBUNGI KAMI) ================= */}
         {activeTab === 'kontak' && (
-          <div className="animate-fade-in">
+          <motion.div
+            key="kontak"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+          >
             <ContactPageSection
               onNavigateToOrder={() => handleTabChange('order')}
             />
-          </div>
+          </motion.div>
         )}
 
-        {/* ================= PAGE 5: ADMIN DASHBOARD (INPUT BLOG & ARTIKEL) ================= */}
+        {/* ================= PAGE 6: ADMIN DASHBOARD (INPUT BLOG & ARTIKEL) ================= */}
         {activeTab === 'admin' && (
-          <div className="animate-fade-in">
+          <motion.div
+            key="admin"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+          >
             <AdminDashboard
               onNavigateToHome={() => handleTabChange('home')}
               onNavigateToPublicArticles={() => handleTabChange('artikel')}
             />
-          </div>
+          </motion.div>
         )}
       </main>
 
@@ -274,11 +375,11 @@ export default function App() {
       <button
         type="button"
         onClick={() => setIsPromoModalOpen(true)}
-        className="fixed bottom-20 left-4 z-40 px-3.5 py-2 rounded-full bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 hover:from-amber-500 hover:to-yellow-500 text-slate-950 font-black text-xs shadow-xl border border-white/70 flex items-center gap-1.5 transform hover:scale-105 active:scale-95 transition-all cursor-pointer ring-2 ring-amber-300/60"
+        className="fixed bottom-5 left-4 z-40 px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-full bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 hover:from-amber-500 hover:to-yellow-500 text-slate-950 font-black text-[11px] sm:text-xs shadow-xl border border-white/70 flex items-center gap-1.5 transform hover:scale-105 active:scale-95 transition-all cursor-pointer ring-2 ring-amber-300/60"
         title="Buka Promo Diskon 50%"
         aria-label="Buka Banner Promo Diskon 50%"
       >
-        <Sparkles className="w-3.5 h-3.5 fill-current animate-pulse" />
+        <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5 fill-current animate-pulse" />
         <span>Diskon 50%</span>
       </button>
 

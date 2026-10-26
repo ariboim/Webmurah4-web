@@ -86,9 +86,9 @@ export const TopFlashSaleBar: React.FC = () => {
         </div>
 
         {/* Right: Navy Countdown & Brand Orange Action CTA */}
-        <div className="flex items-center gap-2.5 sm:gap-3 shrink-0">
+        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 shrink-0 w-full sm:w-auto">
           {/* Countdown Container (Dark Navy with Glowing Amber/White Digits) */}
-          <div className="flex items-center gap-1.5 bg-[#0F2454] px-2.5 py-1 rounded-lg border border-[#1D3582] shadow-xs">
+          <div className="flex items-center gap-1.5 bg-[#0F2454] px-2 sm:px-2.5 py-1 rounded-lg border border-[#1D3582] shadow-xs">
             <span className="text-[10px] sm:text-[11px] font-black text-[#7DD3FC] uppercase tracking-wider">
               BERAKHIR:
             </span>
@@ -110,7 +110,7 @@ export const TopFlashSaleBar: React.FC = () => {
           {/* Prominent CTA Button with Indo Digital Orange-Gold Gradient */}
           <button
             onClick={scrollToOrder}
-            className="inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-1.5 text-xs font-black bg-gradient-to-r from-[#F58220] via-[#FA8C16] to-[#E65100] hover:from-[#EA580C] hover:to-[#D96B00] text-white rounded-lg shadow-sm hover:shadow-md hover:shadow-orange-500/20 transition-all cursor-pointer whitespace-nowrap active:scale-95"
+            className="inline-flex items-center gap-1.5 px-3 sm:px-4 py-1.5 text-[11px] sm:text-xs font-black bg-gradient-to-r from-[#F58220] via-[#FA8C16] to-[#E65100] hover:from-[#EA580C] hover:to-[#D96B00] text-white rounded-lg shadow-sm hover:shadow-md hover:shadow-orange-500/20 transition-all cursor-pointer whitespace-nowrap active:scale-95"
           >
             <span>AMBIL PROMO RP 499RB</span>
             <ArrowRight className="w-3.5 h-3.5 stroke-[3]" />
